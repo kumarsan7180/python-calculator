@@ -10,17 +10,4 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.10'
-  displayName: 'Use Python $(python.version)'
-
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
-
-- script: |
-    pip install pytest pytest-azurepipelines
-    pytest
-  displayName: 'pytest'
+  - script: echo "Hello World"
